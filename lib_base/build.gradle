@@ -1,0 +1,39 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+
+    }
+
+
+
+//    dataBinding {
+//        enabled true
+//    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation "com.android.support:support-v4:$rootProject.supportV4"
+    implementation "com.android.support:appcompat-v7:$rootProject.appcompatV7"
+//    implementation 'com.google.android.material:material:1.0.0'
+
+//    api "io.reactivex.rxjava2:rxjava:$rootProject.rxJava"
+//    api "io.reactivex.rxjava2:rxandroid:$rootProject.rxAndroid"
+//    implementation 'androidx.cardview:cardview:1.0.0'
+
+    // 友盟统计
+
+    //状态
+//    implementation 'com.tuyenmonkey:mkloader:1.4.0'
+}

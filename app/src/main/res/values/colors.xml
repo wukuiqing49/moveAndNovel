@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="app_color_blue">#00A8E1</color>
+    <color name="app_color_blue_disabled">#8000A8E1</color>
+    <color name="app_color_blue_pressed">#c000A8E1</color>
+
+    <color name="app_color_blue_2">#31BDF3</color>
+    <color name="app_color_blue_2_disabled">#7F31BDF3</color>
+    <color name="app_color_blue_2_pressed">#7F31BDF3</color>
+
+    <color name="app_color_blue_3">#EBF9FF</color>
+    <color name="app_color_blue_3_disabled">#7FEBF9FF</color>
+    <color name="app_color_blue_3_pressed">#7FEBF9FF</color>
+
+    <color name="app_color_theme_1">#EF5362</color> <!-- Grapefruit -->
+    <color name="app_color_theme_2">#FE6D4B</color> <!-- Bittersweet -->
+    <color name="app_color_theme_3">#FFCF47</color> <!-- Sunflower -->
+    <color name="app_color_theme_4">#9FD661</color> <!-- Grass -->
+    <color name="app_color_theme_5">#3FD0AD</color> <!-- Mint -->
+    <color name="app_color_theme_6">#2BBDF3</color> <!-- Aqua -->
+    <color name="app_color_theme_7">#5A9AEF</color> <!-- Blue Jeans -->
+    <color name="app_color_theme_8">#AC8FEF</color> <!-- Lavender -->
+    <color name="app_color_theme_9">#EE85C1</color> <!-- Pink Rose -->
+
+    <color name="app_color_description">@color/qmui_config_color_gray_5</color>
+
+    <color name="bar_divider">#D4D6D8</color>
+    <color name="tab_panel_bg">#ffffff</color>
+    <color name="tab_panel_divider">@color/bar_divider</color>
+
+    <!-- Components 组件 -->
+    <color name="radiusImageView_border_color">@color/app_color_theme_2</color>
+    <color name="radiusImageView_selected_border_color">@color/app_color_theme_1</color>
+    <color name="radiusImageView_selected_mask_color">#7FEF5362</color>
+
+    <!-- Helper 系列界面 -->
+
+    <!-- ColorHelper 颜色工具 -->
+    <color name="colorHelper_square_alpha_background">@color/app_color_theme_4</color>
+    <color name="colorHelper_square_from_ratio_background">@color/app_color_blue</color>
+    <color name="colorHelper_square_to_ratio_background">@color/app_color_theme_3</color>
+
+
+    <color name="qmui_config_color_gray_1">#353C46</color>
+    <color name="qmui_config_color_gray_2">#49505A</color>
+    <color name="qmui_config_color_gray_3">#5D646E</color>
+    <color name="qmui_config_color_gray_4">#717882</color>
+    <color name="qmui_config_color_gray_5">#858C96</color>
+    <color name="qmui_config_color_gray_6">#99A0AA</color>
+    <color name="qmui_config_color_gray_7">#ADB4BE</color>
+    <color name="qmui_config_color_gray_8">#C4C8D0</color>
+    <color name="qmui_config_color_gray_9">#D8DCE4</color>
+    <color name="color_23d41e">#23d41e</color>
+    <color name="color_f4f4f4">#fff4f4f4</color>
+    <color name="color_333">#ff333333</color>
+    <color name="color_666">#ff666666</color>
+    <color name="color_999">#ff999999</color>
+    <color name="color_6bd">#ff6BD17A</color>
+    <color name="color_2b2b2b">#2B2B2B</color>
+    <color name="color_ddd">#2B2B2B</color>
+    <color name="color_n">#888</color>
+    <color name="color_s">#000</color>
+    <color name="color_f2f2">#f2f2f2</color>
+
+
+
+    <color name="textWhite">#ffffff</color>
+    <color name="grey">#99CCCCCC</color>
+    <color name="textBlack">#E21F1F1F</color>
+    <color name="textBlack_light">#E2313131</color>
+    <color name="previewShadow">#DE1D1D1D</color>
+    <color name="preview_theme_dark">#131923</color>
+    <color name="preview_theme_white">#E3C39F</color>
+    <color name="preview_theme_green">#CFEDCC</color>
+
+    <color name="white_grey">#8AFFFFFF</color>
+    <color name="rank_first">#d93c5b</color>
+    <color name="rank_second">#E26621</color>
+    <color name="rank_third">#E2B621</color>
+    <color name="rank_normal">#74000000</color>
+    <color name="alpha_black">#7A7A7A</color>
+    <color name="classify_1">#9AC5EC</color>
+    <color name="classify_2">#98C7CC</color>
+    <color name="classify_3">#B8ACC8</color>
+    <color name="classify_4">#E8B783</color>
+    <color name="default_text_color">#8A000000</color>
+    <color name="downloadColor">#1A7BAC</color>
+
+    <color name="colorPrimary">#03A9F4</color>
+    <color name="colorPrimaryDark">#03A9F4</color>
+    <color name="sourceColor">#03A9F4</color>
+
+
+
+</resources>

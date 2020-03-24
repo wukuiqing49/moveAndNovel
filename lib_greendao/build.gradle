@@ -1,0 +1,22 @@
+apply plugin: 'application'
+apply plugin: 'java'
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'org.greenrobot:greendao-generator:3.2.2'
+}
+
+
+mainClassName = "com.wkq.MainDaoGenerator"
+
+def outputDir = "../lib_database/src/main/java/"
+
+task createDocs {
+    def docs = file(outputDir)
+    docs.mkdirs()
+}
+
+run {
+    args outputDir
+}

@@ -1,0 +1,58 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion  rootProject.ext.compileSdkVersion
+    buildToolsVersion  rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+
+    dataBinding {
+        enabled true
+    }
+
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+//Android support libs
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    //Retrofit
+    api "com.squareup.retrofit2:retrofit:$rootProject.retrofit"
+    api "com.squareup.retrofit2:converter-gson:$rootProject.converterGson"
+    api("com.squareup.retrofit2:adapter-rxjava2:$rootProject.adapterRxjava2") {
+        exclude module: 'rxjava'// rxJava
+    }
+
+    implementation "io.reactivex.rxjava2:rxjava:$rootProject.rxJava"
+    implementation "io.reactivex.rxjava2:rxandroid:$rootProject.rxAndroid"
+    //OKhttp
+    api "com.squareup.okhttp3:okhttp:$rootProject.okhttp"
+    api "com.squareup.okhttp3:logging-interceptor:$rootProject.loggingInterceptor"
+
+//    //RxJava
+//    implementation 'io.reactivex.rxjava2:rxjava:2.1.8'
+//    implementation('io.reactivex.rxjava2:rxandroid:2.0.1') {
+//        exclude module: 'rxjava'// rxJava
+//    }
+    implementation project(path: ':lib_base')
+}

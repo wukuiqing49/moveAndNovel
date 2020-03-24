@@ -1,0 +1,59 @@
+<resources>
+
+    <string name="dialog_imagepicker_permission_confirm">我知道了</string>
+    <string name="toast_imagepicker_permission_denied">无法获取所需权限</string>
+    <string name="dialog_imagepicker_permission_nerver_ask_confirm">去设置</string>
+    <string name="dialog_imagepicker_permission_nerver_ask_cancel">取消</string>
+    <string name="dialog_imagepicker_permission_sdcard_message">应用程序需要获取外部存储卡的读写权限，否则无法获取照片数据!</string>
+    <string name="dialog_imagepicker_permission_sdcard_audio_message">应用程序需要获取外部存储卡的读写权限,麦克风权限以及手机状态权限，否则无法进行语音输入!</string>
+    <string name="dialog_imagepicker_permission_camera_message">应用程序需要获取拍照权限和外部存储卡写入权限以及麦克风权限，否则无法拍摄!</string>
+    <string name="dialog_imagepicker_permission_share_message">应用程序需要获取外部存储卡写入权限，否则无法正常使用分享功能!</string>
+    <string name="dialog_imagepicker_permission_sdcard_nerver_ask_message">应用程序无法获取外部存储卡的读写权限，导致无法获取照片数据，您可通过系统设置界面打开软件的读写权限</string>
+    <string name="dialog_imagepicker_permission_camera_nerver_ask_message">应用程序无法获取拍照所需权限，导致无法启用拍照功能，您可通过系统设置界面打开软件的拍照权限和外部存储卡读写权限</string>
+
+    <string name="msg_no_save_permission">无法读取本地文件,请开启读取存储权限</string>
+    <string name="CAMERA">需要打开系统相机权限</string>
+    <string name="msg_no_camera_permission">相机开启失败,请开启系统相机权限</string>
+    <string name="msg_error_camera">相机开启失败</string>
+    <string name="library_name">媒体选择器</string>
+
+
+    <!-- Menu -->
+    <string name="menu_refresh">Refresh</string>
+    <string name="menu_copy_link">Copy Link</string>
+    <string name="menu_open_with_other_browser">Open With Other Browser</string>
+    <string name="menu_share">Share</string>
+
+    <!-- Message -->
+    <string name="message_copy_to_clipboard">Copy To Clipboard</string>
+    <string name="message_invalid_url">Wrong URL</string>
+    <string name="message_download_started">Downloading…</string>
+
+    <!-- Dialog items -->
+    <string name="send_email">Send Email</string>
+    <string name="copy_link">Copy Link Address</string>
+    <string name="save_link">Save Link</string>
+    <string name="save_image">Save Image</string>
+    <string name="open_image">Open Image</string>
+
+    <string name="copy_email">Copy Email Address</string>
+    <string name="copy_link_text">Copy Link Text</string>
+
+    <string name="email">Email</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="select_image">Select Image</string>
+    <string name="loading">Loading…</string>
+    <string name="open">Open</string>
+    <string name="downloaded_message"> is downloaded</string>
+
+    <string name="write_permission_denied_title">Unable to save</string>
+    <string name="write_permission_denied_message">You have denied the permission for writing. Please go to app settings and allow permission</string>
+    <string name="dialog_dismiss">DISMISS</string>
+    <string name="dialog_settings">SETTINGS</string>
+    <string name="message_activity_not_found">Couldn\'t find application</string>
+
+
+
+
+</resources>

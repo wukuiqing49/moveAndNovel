@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">lib_qr</string>
+    <string name="request_camera">应用程序需要获取照相机权限，否则无法识别二维码!</string>
+</resources>

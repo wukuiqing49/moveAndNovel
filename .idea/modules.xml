@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib_base/lib_base.iml" filepath="$PROJECT_DIR$/lib_base/lib_base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib_bs/lib_bs.iml" filepath="$PROJECT_DIR$/lib_bs/lib_bs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib_database/lib_database.iml" filepath="$PROJECT_DIR$/lib_database/lib_database.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib_greendao/lib_greendao.iml" filepath="$PROJECT_DIR$/lib_greendao/lib_greendao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib_move/lib_move.iml" filepath="$PROJECT_DIR$/lib_move/lib_move.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib_net/lib_net.iml" filepath="$PROJECT_DIR$/lib_net/lib_net.iml" />
+      <module fileurl="file://$PROJECT_DIR$/order.iml" filepath="$PROJECT_DIR$/order.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/order-app.iml" filepath="$PROJECT_DIR$/app/order-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib_database/order-lib_database.iml" filepath="$PROJECT_DIR$/lib_database/order-lib_database.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib_greendao/order-lib_greendao.iml" filepath="$PROJECT_DIR$/lib_greendao/order-lib_greendao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wkq-order.iml" filepath="$PROJECT_DIR$/wkq-order.iml" />
+    </modules>
+  </component>
+</project>

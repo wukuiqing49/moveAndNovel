@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.xl.ratingbar:ratingbar:0.1.1@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6a87695be4156306dbb02e15ebc8386e/ratingbar-0.1.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6a87695be4156306dbb02e15ebc8386e/ratingbar-0.1.1/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.xl.ratingbar/ratingbar/0.1.1/7db3f40174a69027240b780ce988bda90b90e274/ratingbar-0.1.1-javadoc.jar!/" />
+    </JAVADOC>
+    <LIBRARY_FILE />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.xl.ratingbar/ratingbar/0.1.1/7a1d585c1aa88abd7c8909c5fcf969173504a5eb/ratingbar-0.1.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

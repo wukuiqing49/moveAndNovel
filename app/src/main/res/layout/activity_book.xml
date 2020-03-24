@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.zia.page.book.BookActivity">
+
+    <ImageView
+        android:id="@+id/book_blurImage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/colorPrimary"
+        android:elevation="2dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/book_cover_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/book_back"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:elevation="2dp"
+        android:src="@mipmap/ic_arrow_back_white_24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/book_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:elevation="2dp"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxWidth="200dp"
+        android:maxLines="1"
+        android:textColor="@color/textWhite"
+        android:transitionName="book_author"
+        app:layout_constraintStart_toEndOf="@+id/book_author_str"
+        app:layout_constraintTop_toTopOf="@+id/book_author_str"
+        tools:text="天蚕土豆" />
+
+    <TextView
+        android:id="@+id/book_lastUpdateTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:elevation="2dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/textWhite"
+        android:transitionName="book_lastUpdateTime"
+        app:layout_constraintStart_toEndOf="@+id/book_updateTime_str"
+        app:layout_constraintTop_toTopOf="@+id/book_updateTime_str"
+        tools:text="2018.11.1" />
+
+    <ImageView
+        android:id="@+id/book_image"
+        android:layout_width="99dp"
+        android:layout_height="132dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:elevation="2dp"
+        android:transitionName="book_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/book_back"
+        tools:src="@drawable/ic_book_cover_default" />
+
+    <TextView
+        android:id="@+id/book_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:elevation="2dp"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxWidth="250dp"
+        android:maxLines="1"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textColor="@color/textWhite"
+        android:textSize="20sp"
+        android:transitionName="book_name"
+        app:layout_constraintStart_toEndOf="@+id/book_image"
+        app:layout_constraintTop_toTopOf="@+id/book_image"
+        tools:text="斗破苍穹asdgaeasefasgeagsgas" />
+
+    <TextView
+        android:id="@+id/book_lastUpdateChapter_str"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:elevation="2dp"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:text="最新:  "
+        android:textColor="@color/textWhite"
+        app:layout_constraintStart_toStartOf="@+id/book_name"
+        app:layout_constraintTop_toBottomOf="@+id/book_author_str" />
+
+    <TextView
+        android:id="@+id/book_updateTime_str"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:elevation="2dp"
+        android:text="更新:  "
+        android:textColor="@color/textWhite"
+        app:layout_constraintStart_toStartOf="@+id/book_name"
+        app:layout_constraintTop_toBottomOf="@+id/book_lastUpdateChapter_str" />
+
+    <TextView
+        android:id="@+id/book_site"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/bg_source_white"
+        android:elevation="2dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:padding="2dp"
+        android:textColor="@color/textWhite"
+        android:textSize="12sp"
+        android:transitionName="book_site"
+        app:layout_constraintBottom_toBottomOf="@+id/book_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/book_back"
+        tools:text="笔趣阁" />
+
+    <TextView
+        android:id="@+id/book_author_str"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:elevation="2dp"
+        android:text="作者:  "
+        android:textColor="@color/textWhite"
+        app:layout_constraintStart_toStartOf="@+id/book_name"
+        app:layout_constraintTop_toBottomOf="@+id/book_name" />
+
+    <TextView
+        android:id="@+id/book_history_str"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:elevation="2dp"
+        android:text="记录:  "
+        android:textColor="@color/textWhite"
+        app:layout_constraintStart_toStartOf="@+id/book_name"
+        app:layout_constraintTop_toBottomOf="@+id/book_updateTime_str" />
+
+    <TextView
+        android:id="@+id/book_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:elevation="2dp"
+        android:textColor="@color/textWhite"
+        app:layout_constraintStart_toEndOf="@+id/book_history_str"
+        app:layout_constraintTop_toTopOf="@+id/book_history_str"
+        tools:text="斗宗强者" />
+
+    <TextView
+        android:id="@+id/book_lastUpdateChapter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:elevation="2dp"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:textColor="@color/textWhite"
+        android:transitionName="book_lastUpdateChapter"
+        app:layout_constraintStart_toEndOf="@+id/book_lastUpdateChapter_str"
+        app:layout_constraintTop_toTopOf="@+id/book_lastUpdateChapter_str"
+        tools:text="大结局" />
+
+    <TextView
+        android:id="@+id/book_introduce"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:elevation="2dp"
+        android:ellipsize="end"
+        android:maxLines="4"
+        android:paddingBottom="10dp"
+        android:textColor="@color/textWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/book_image"
+        tools:text="   简介" />
+
+    <View
+        android:id="@+id/book_cover_dark"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#2A000000"
+        android:elevation="1dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/book_introduce"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/book_sl"
+        style="@style/Theme.Design.Light"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/book_blurImage">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/catalogRv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fadeScrollbars="true"
+            android:fastScrollEnabled="true"
+            tools:itemCount="11"
+            tools:listitem="@layout/recycler_view_item" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:id="@+id/book_loading"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:text="加载中..."
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/book_sl"
+        app:layout_constraintEnd_toEndOf="@+id/book_sl"
+        app:layout_constraintStart_toStartOf="@+id/book_sl"
+        app:layout_constraintTop_toTopOf="@+id/book_sl" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:elevation="3dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/book_download"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/download"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/book_beginRead"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_card"
+            android:backgroundTint="@color/colorPrimary"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/continue_read"
+            android:textColor="@color/textWhite"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/book_favorite"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/insert_bookrack"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

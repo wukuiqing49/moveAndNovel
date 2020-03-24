@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View.OnClickListener" />
+
+        <variable
+            name="onclick"
+            type="OnClickListener" />
+
+        <variable
+            name="data"
+            type="com.zia.easybookmodule.bean.Book" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_f4f4f4"
+        android:orientation="vertical">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/rl_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:orientation="vertical">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appbarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                app:elevation="0dp">
+
+                <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:id="@+id/collapsing_topbar_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:contentScrim="@color/color_2b2b2b"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/white"
+                        app:layout_collapseMode="parallax">
+
+                        <ImageView
+                            android:id="@+id/iv_drop"
+                            android:layout_width="match_parent"
+                            android:layout_height="220dp"
+                            android:background="@color/color_333"
+                            android:scaleType="centerCrop"
+                            app:layout_collapseMode="parallax" />
+
+                        <RelativeLayout
+                            android:paddingBottom="20dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginTop="200dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@color/transparent">
+
+                            <ImageView
+
+                                android:id="@+id/iv_icon"
+                                android:layout_width="100dp"
+                                android:layout_height="130dp"
+                                android:layout_marginLeft="10dp"
+                                android:scaleType="centerCrop" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="35dp"
+                                android:layout_toRightOf="@+id/iv_icon"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_neme"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginRight="15dp"
+                                    android:ellipsize="end"
+                                    android:lines="1"
+                                    android:text="@{data.bookName}"
+
+                                    android:textColor="@color/color_333"
+                                    android:textSize="17sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_author"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="15dp"
+                                    android:ellipsize="end"
+                                    android:lines="1"
+                                    android:text="@{data.author}"
+
+                                    android:textColor="@color/color_666"
+                                    android:textSize="15sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_move_time"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="2dp"
+                                    android:layout_marginRight="15dp"
+                                    android:ellipsize="end"
+                                    android:lines="1"
+                                    android:text="@{data.lastUpdateTime}"
+                                    android:textColor="@color/color_666"
+                                    android:textSize="15sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_move_type"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="2dp"
+                                    android:layout_marginRight="15dp"
+                                    android:ellipsize="end"
+                                    android:lines="1"
+                                    android:text="@{data.classify}"
+                                    android:textColor="@color/color_666"
+                                    android:textSize="15sp" />
+
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:background="@color/transparent"
+                        app:contentInsetStart="0dp"
+                        app:layout_collapseMode="pin">
+
+                        <RelativeLayout
+
+                            android:layout_width="match_parent"
+
+                            android:layout_height="match_parent">
+
+                            <RelativeLayout
+                                android:id="@+id/rl_back"
+                                android:layout_width="70dp"
+                                android:layout_height="match_parent"
+                                android:onClick="@{onclick}">
+
+                                <ImageView
+                                    android:id="@+id/iv_back"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginTop="40dp"
+                                    android:src="@mipmap/ic_arrow_back_white_24dp" />
+
+                            </RelativeLayout>
+
+
+                            <TextView
+                                android:id="@+id/tv_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="40dp"
+                                android:text="@{data.bookName}"
+                                android:textColor="@color/white"
+                                android:textSize="20dp"
+                                android:textStyle="bold" />
+
+
+                        </RelativeLayout>
+
+
+                    </androidx.appcompat.widget.Toolbar>
+
+
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="50dp"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/color_f2f2"
+                        android:visibility="gone" />
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_credits"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="主演"
+                            android:textColor="@color/color_333" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+
+                            android:id="@+id/rv_chapter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginBottom="10dp" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </androidx.core.widget.NestedScrollView>
+
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true">
+
+
+            <ImageView
+                android:id="@+id/iv_icon_bg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/movie_7" />
+
+            <com.tuyenmonkey.mkloader.MKLoader
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="24dp"
+                app:mk_type="TwinFishesSpinner" />
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</layout>

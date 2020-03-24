@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="Gradle: com.download.library:Downloader:4.1.2@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e69e8e0f1e72f1fd1fc6ca53fca125bd/jetified-Downloader-4.1.2/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e69e8e0f1e72f1fd1fc6ca53fca125bd/jetified-Downloader-4.1.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e69e8e0f1e72f1fd1fc6ca53fca125bd/jetified-Downloader-4.1.2/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.download.library/Downloader/4.1.2/d507eb5a1811d048e679e4eda9b20952257ee93d/Downloader-4.1.2-javadoc.jar!/" />
+    </JAVADOC>
+    <LIBRARY_FILE />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.download.library/Downloader/4.1.2/13243ee6016a14aabcce8e64887da7f2f391ebb3/Downloader-4.1.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

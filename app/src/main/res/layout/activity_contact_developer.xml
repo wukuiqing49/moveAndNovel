@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_f4f4f4"
+        android:orientation="vertical">
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+
+            android:layout_height="80dp"
+            android:background="@color/color_2b2b2b">
+
+            <RelativeLayout
+                android:id="@+id/rl_back"
+                android:layout_width="60dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iv_play"
+                    android:layout_width="25dp"
+
+                    android:layout_height="25dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:src="@mipmap/ic_arrow_back_white_24dp" />
+
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="15dp"
+                android:text="联系开发者"
+                android:textColor="@color/white"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_qq"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/shape_living_count_bg"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="QQ :"
+                android:textStyle="bold"
+                android:textSize="19sp"
+                android:textColor="@color/color_333"
+                />
+
+            <TextView
+                android:layout_gravity="center_vertical"
+
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1571478933"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:textColor="@color/color_23d41e"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_email"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/shape_living_count_bg"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="邮箱 :"
+                android:textStyle="bold"
+                android:textSize="19sp"
+                android:textColor="@color/color_333"
+                />
+
+            <TextView
+                android:layout_gravity="center_vertical"
+
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1571478933@qq.com"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:textColor="@color/color_23d41e"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</layout>

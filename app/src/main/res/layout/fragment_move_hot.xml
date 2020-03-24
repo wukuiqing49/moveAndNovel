@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/rv_sf"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_f4f4f4"
+        app:srlEnableAutoLoadMore="false"
+        app:srlEnableLoadMore="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp" />
+
+
+        </RelativeLayout>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+</layout>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Lib_Net</string>
+
+
+    <string name="load_success_message">接口请求成功</string>
+    <string name="load_failure_message">接口请求失败</string>
+    <string name="load_error_message">接口请求错误</string>
+    <string name="no_network_message">无法连接网络</string>
+    <string name="unknown_error_message">未知错误</string>
+</resources>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="80dp"
+            android:background="@color/color_2b2b2b">
+
+            <RelativeLayout
+                android:id="@+id/rl_back"
+                android:layout_width="60dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iv_play"
+                    android:layout_width="25dp"
+
+                    android:layout_height="25dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:src="@mipmap/ic_arrow_back_white_24dp" />
+
+
+            </RelativeLayout>
+
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="15dp"
+                android:layout_toLeftOf="@+id/rl_search"
+                android:layout_toRightOf="@+id/rl_back"
+                android:background="@null"
+                android:gravity="left"
+                android:hint="请输入您要搜索的电影名字"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="15sp" />
+
+
+            <RelativeLayout
+
+                android:id="@+id/rl_search"
+
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="13dp"
+                    android:background="@mipmap/ic_search_white_48dp"
+                    android:padding="10dp" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/rl_search_hisory"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_f4f4f4"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="搜索历史 :"
+                android:textColor="@color/color_666"
+                android:textSize="15sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_search_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp" />
+
+        </LinearLayout>
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/rv_sf"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_f4f4f4"
+            android:visibility="gone">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_f4f4f4"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="100dp"
+                android:src="@mipmap/ic_cinema_movie_sold_out" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</layout>

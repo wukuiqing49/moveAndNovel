@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View.OnClickListener"/>
+        <variable
+            name="onClicker"
+            type="OnClickListener" />
+
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/ll_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_marginTop="1dp"
+            android:id="@+id/iv_loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@mipmap/web_def_img_mjz" />
+
+
+        <Button
+            android:text="去除广告"
+            android:id="@+id/bt_ad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+
+    </RelativeLayout>
+
+</layout>
+

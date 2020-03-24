@@ -1,0 +1,263 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 5,
+    "identityHash": "c409025cac7cd4ec89bad21e572c3d59",
+    "entities": [
+      {
+        "tableName": "localBook",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`bkId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `bookName` TEXT, `filePath` TEXT, `author` TEXT, `url` TEXT, `chapterSize` TEXT, `lastUpdateTime` TEXT, `lastChapterName` TEXT, `siteName` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "bkId",
+            "columnName": "bkId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "bookName",
+            "columnName": "bookName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "filePath",
+            "columnName": "filePath",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "author",
+            "columnName": "author",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "url",
+            "columnName": "url",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "imageUrl",
+            "columnName": "chapterSize",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "lastUpdateTime",
+            "columnName": "lastUpdateTime",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "lastChapterName",
+            "columnName": "lastChapterName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "siteName",
+            "columnName": "siteName",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "bkId"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "netBook",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`bkId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `bookName` TEXT, `author` TEXT, `url` TEXT, `chapterSize` TEXT, `lastUpdateTime` TEXT, `lastChapterName` TEXT, `siteName` TEXT, `lastCheckCount` INTEGER NOT NULL, `currentCheckCount` INTEGER NOT NULL, `time` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "bkId",
+            "columnName": "bkId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "bookName",
+            "columnName": "bookName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "author",
+            "columnName": "author",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "url",
+            "columnName": "url",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "imageUrl",
+            "columnName": "chapterSize",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "lastUpdateTime",
+            "columnName": "lastUpdateTime",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "lastChapterName",
+            "columnName": "lastChapterName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "siteName",
+            "columnName": "siteName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "lastCheckCount",
+            "columnName": "lastCheckCount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "currentCheckCount",
+            "columnName": "currentCheckCount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "time",
+            "columnName": "time",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "bkId"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "bookMark",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`markId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `siteName` TEXT, `bookName` TEXT, `position` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "markId",
+            "columnName": "markId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "siteName",
+            "columnName": "siteName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "bookName",
+            "columnName": "bookName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "position",
+            "columnName": "position",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "markId"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "bookCache",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`siteName` TEXT NOT NULL, `bookName` TEXT NOT NULL, `index` INTEGER NOT NULL, `chapterName` TEXT, `url` TEXT, `contents` TEXT, PRIMARY KEY(`siteName`, `bookName`, `index`))",
+        "fields": [
+          {
+            "fieldPath": "siteName",
+            "columnName": "siteName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "bookName",
+            "columnName": "bookName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "index",
+            "columnName": "index",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "chapterName",
+            "columnName": "chapterName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "url",
+            "columnName": "url",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "contents",
+            "columnName": "contents",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "siteName",
+            "bookName",
+            "index"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_bookCache_siteName_bookName_index",
+            "unique": true,
+            "columnNames": [
+              "siteName",
+              "bookName",
+              "index"
+            ],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_bookCache_siteName_bookName_index` ON `${TABLE_NAME}` (`siteName`, `bookName`, `index`)"
+          }
+        ],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'c409025cac7cd4ec89bad21e572c3d59')"
+    ]
+  }
+}

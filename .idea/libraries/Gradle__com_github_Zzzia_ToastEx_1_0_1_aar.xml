@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.Zzzia:ToastEx:1.0.1@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/41d8e70e8aa0ece405ee20755e015cd4/jetified-ToastEx-1.0.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/41d8e70e8aa0ece405ee20755e015cd4/jetified-ToastEx-1.0.1/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.Zzzia/ToastEx/1.0.1/7379125f0b674ada9b3fb00eae7d9913d375406e/ToastEx-1.0.1-javadoc.jar!/" />
+    </JAVADOC>
+    <LIBRARY_FILE />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.Zzzia/ToastEx/1.0.1/a0b15f4de08a1348c791da5ba8162c10ef5c0a54/ToastEx-1.0.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
