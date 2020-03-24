@@ -41,22 +41,23 @@ public class CheckLineView implements MvpView {
 
         List<CheckLineInfo> checkLines = new ArrayList<>();
 
-        checkLines.add(new CheckLineInfo("VIP无广告", "https://jiexi.bm6ig.cn/?url="));
-        checkLines.add(new CheckLineInfo("VIP无广告2", "http://demo.hao0606.com/?url="));
-//        checkLines.add(new CheckLineInfo("VIP无广告3", "http://jx.1ff1.cn/?url="));
-        checkLines.add(new CheckLineInfo("vip无广告初心", "http://jx.bwcxy.com/?v="));
+        checkLines.add(new CheckLineInfo("稳定线路1", "https://jiexi.bm6ig.cn/?url="));
+
+        checkLines.add(new CheckLineInfo("稳定线路2", "http://jx.1ff1.cn/?url="));
+        checkLines.add(new CheckLineInfo("稳定线路3", "http://jx.bwcxy.com/?v="));
         checkLines.add(new CheckLineInfo("Vip无广告116", "https://vip.116kan.com/?url="));
         checkLines.add(new CheckLineInfo("vip知网(搜索)", "http://www.xyyh.xyz/zwjx/?url=url="));
         checkLines.add(new CheckLineInfo("Vip一路发(无广告)", "https://www.cuan.la/?url="));
-        checkLines.add(new CheckLineInfo("vip出言", "http://jx.wodym.cn/?url="));
 
 
+        checkLines.add(new CheckLineInfo("全屏去广告", "http://demo.hao0606.com/?url="));
         checkLines.add(new CheckLineInfo("大亨解析(全屏去广告)", "http://jx.cesms.cn/?url="));
         checkLines.add(new CheckLineInfo("vip星空(全屏去广告)", "https://play.fo97.cn/?url="));
 //        checkLines.add(new CheckLineInfo("Vip8090(全屏去广告", "https://play.fo97.cn/?url="));
         checkLines.add(new CheckLineInfo("云解析(全屏去广告)", "http://jx.rdhk.net/?v="));
         checkLines.add(new CheckLineInfo("待定速度慢(全屏去广告)", "https://www.administratorw.com/admin.php?url="));
         checkLines.add(new CheckLineInfo("上滑动全屏去广告备用(有广告)", "http://jx.aeidu.cn/index.php?url="));
+
 
 
 
