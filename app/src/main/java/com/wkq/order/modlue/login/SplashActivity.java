@@ -39,19 +39,19 @@ public class SplashActivity extends MvpBindingActivity<SplashView, SplashPresent
         super.onCreate(savedInstanceState);
         if (getMvpView() != null) getMvpView().initView();
 
-
-        if (Build.VERSION.SDK_INT >= 23) {
-
-
-            if (System.currentTimeMillis() < 1588742893000l) {
-                checkAndRequestPermission();
-            } else {
-                getMvpView().showMessage("已过期");
-            }
-            ;
-        } else {
-            if (getMvpView() != null) getMvpView().initUMIAd();
-        }
+//
+//        if (Build.VERSION.SDK_INT >= 23) {
+//
+//
+//            if (System.currentTimeMillis() < 1588742893000l) {
+//                checkAndRequestPermission();
+//            } else {
+//                getMvpView().showMessage("已过期");
+//            }
+//            ;
+//        } else {
+//            if (getMvpView() != null) getMvpView().initUMIAd();
+//        }
 
 
     }

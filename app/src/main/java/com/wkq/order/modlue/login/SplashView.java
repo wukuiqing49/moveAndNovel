@@ -50,6 +50,8 @@ public class SplashView implements MvpView, SpotRequestListener {
 
         initData();
 
+        jumpHomeActivity();
+
 
 
 
