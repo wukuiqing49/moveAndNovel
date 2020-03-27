@@ -1,15 +1,23 @@
 package com.wkq.order.application;
 
 import android.content.Context;
+import android.os.Build;
+import android.util.Log;
 
 import androidx.multidex.MultiDexApplication;
 
+import com.bun.miitmdid.core.ErrorCode;
+import com.bun.miitmdid.core.JLibrary;
+import com.bun.miitmdid.core.MdidSdkHelper;
+import com.bun.supplier.IIdentifierListener;
+import com.bun.supplier.IdSupplier;
 import com.facebook.stetho.Stetho;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.umeng.commonsdk.UMConfigure;
 import com.wkq.order.R;
 import com.wkq.order.modlue.novel.ui.activity.preview.FileUtil;
+import com.wkq.order.utils.DeviceUtlis;
 import com.zia.easybookmodule.bean.rule.XpathSiteRule;
 import com.zia.easybookmodule.engine.SiteCollection;
 import com.zia.easybookmodule.site.CustomXpathSite;
@@ -32,12 +40,12 @@ import java.util.List;
  * 简介:
  */
 public class OrderApplication extends MultiDexApplication {
-   static  Context mContext;
+    static Context mContext;
 
     @Override
     public void onCreate() {
         super.onCreate();
-        mContext=this;
+        mContext = this;
         initDb();
         initYm();
 
@@ -59,10 +67,27 @@ public class OrderApplication extends MultiDexApplication {
             e.printStackTrace();
         }
 
+        initIMEI();
+
 
     }
 
-    public static Context getContext(){
+
+    private void initIMEI() {
+
+
+            try {
+                JLibrary.InitEntry(mContext);
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+
+
+    }
+
+    public static Context getContext() {
 
         return mContext;
     }

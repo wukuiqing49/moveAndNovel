@@ -87,10 +87,9 @@ public class SearchMTiemView implements MvpView {
                 if (DoublePressed.onDoublePressed()) return;
                 if (mActivity.binding.etSearch.getText() != null) {
                     showLoading();
+                    moveSearchHistoryAdapter.removeAllItems();
                     mActivity.getPresenter().searchData(mActivity, mActivity.binding.etSearch.getText().toString());
-
                     DataBaseUtils.insertHistoryData(mActivity, mActivity.binding.etSearch.getText().toString());
-                    mActivity.getPresenter().searchData(mActivity, mActivity.binding.etSearch.getText().toString());
                 } else {
                     showMessage("请输入查询的电影名称");
                 }

@@ -198,6 +198,7 @@ public class MoveHtmlView implements MvpView {
         mActivity.binding.raStar.setStar(starf);
 
         if (data.getData().getPlaylist() != null && data.getData().getPlaylist().size() > 0) {
+
             mActivity.binding.cdPlay.setVisibility(View.VISIBLE);
 
             mActivity.binding.cdPlay.setOnClickListener(new View.OnClickListener() {

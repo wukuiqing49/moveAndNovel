@@ -119,12 +119,14 @@ public class HomeHtmlMoveView implements MvpView {
 
         List<MovesTobWebInfo> webInfos = new ArrayList<>();
         webInfos.add(new MovesTobWebInfo("https://v.qq.com/", "腾讯视频", R.mipmap.movie_2));
-
-        webInfos.add(new MovesTobWebInfo("https://www.iqiyi.com/", "爱奇艺", R.mipmap.movie_3));
         webInfos.add(new MovesTobWebInfo("https://www.youku.com/", "优酷视频", R.mipmap.movie_4));
+        webInfos.add(new MovesTobWebInfo("https://www.iqiyi.com/", "爱奇艺", R.mipmap.movie_3));
+
+//        webInfos.add(new MovesTobWebInfo("https://www.bilibili.com/", "B站", R.mipmap.movie_10));
         webInfos.add(new MovesTobWebInfo("https://tv.sohu.com/", "搜狐视频", R.mipmap.movie_6));
         webInfos.add(new MovesTobWebInfo("http://www.pptv.com/", "PPTV视频", R.mipmap.movie_7));
         webInfos.add(new MovesTobWebInfo("http://www.le.com/", "乐视视频", R.mipmap.movie_8));
+
 
         movesTopWebAdapter.addItems(webInfos);
 

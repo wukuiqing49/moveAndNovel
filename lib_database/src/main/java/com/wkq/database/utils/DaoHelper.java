@@ -10,6 +10,7 @@ import com.wkq.database.dao.ExceptionInfoDao;
 import com.wkq.database.dao.HomeTopBannerInfoDao;
 import com.wkq.database.dao.MoveDbDataHitoryDao;
 import com.wkq.database.dao.MoveSearchHistoryDao;
+import com.wkq.database.dao.UserInfoDao;
 
 import org.greenrobot.greendao.database.Database;
 
@@ -57,6 +58,9 @@ public class DaoHelper {
     }
   public MoveSearchHistoryDao getMoveSearchHistoryDao() {
         return daoSession.getMoveSearchHistoryDao();
+    }
+ public UserInfoDao getUserDao() {
+        return daoSession.getUserInfoDao();
     }
 
 

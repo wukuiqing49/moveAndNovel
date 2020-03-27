@@ -3,11 +3,11 @@
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/90532630b6cbf8f1d444e9b080f5cf91/EasyBook-2.57/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/90532630b6cbf8f1d444e9b080f5cf91/EasyBook-2.57/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/90532630b6cbf8f1d444e9b080f5cf91/EasyBook-2.57/jars/libs/slf4j-api-1.7.25.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/90532630b6cbf8f1d444e9b080f5cf91/EasyBook-2.57/jars/libs/jsoup-1.11.2.jar!/" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/90532630b6cbf8f1d444e9b080f5cf91/EasyBook-2.57/jars/libs/epublib-core-3.1.jar!/" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/90532630b6cbf8f1d444e9b080f5cf91/EasyBook-2.57/jars/libs/htmlcleaner-2.22.jar!/" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/90532630b6cbf8f1d444e9b080f5cf91/EasyBook-2.57/jars/libs/jsoup-1.11.2.jar!/" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/90532630b6cbf8f1d444e9b080f5cf91/EasyBook-2.57/jars/libs/slf4j-android-1.7.25.jar!/" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/90532630b6cbf8f1d444e9b080f5cf91/EasyBook-2.57/jars/libs/slf4j-api-1.7.25.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.Zzzia/EasyBook/2.57/e75dadcb68b45722c452823fe24fe9ef6762b789/EasyBook-2.57-javadoc.jar!/" />

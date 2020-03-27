@@ -1,4 +1,4 @@
-package com.wkq.order.modlue.login;
+package com.wkq.order.modlue.login.frame.model;
 
 /**
  * 作者: 吴奎庆

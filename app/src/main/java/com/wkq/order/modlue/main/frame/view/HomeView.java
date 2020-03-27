@@ -1,5 +1,6 @@
 package com.wkq.order.modlue.main.frame.view;
 
+import android.text.TextUtils;
 import android.view.View;
 
 import androidx.core.content.ContextCompat;
@@ -7,7 +8,9 @@ import androidx.viewpager.widget.ViewPager;
 
 
 import com.wkq.base.frame.mosby.delegate.MvpView;
+import com.wkq.baseLib.utlis.AlertUtil;
 import com.wkq.database.utils.DataBaseUtils;
+import com.wkq.order.modlue.main.ui.activity.ContactDeveloperActivity;
 import com.wkq.order.utils.Constant;
 import com.wkq.order.utils.StatusBarUtil;
 import com.wkq.order.R;
@@ -16,6 +19,7 @@ import com.wkq.order.modlue.main.ui.adapter.HomeFragmentPagerAdapter;
 import com.wkq.order.modlue.main.ui.widget.QMUITabSegment;
 import com.wkq.order.modlue.web.ui.VideoWebListActivity;
 
+import static com.wkq.order.utils.Constant.DEBUG_USE_TIME;
 import static com.wkq.order.utils.Constant.MOVE_DB_HOME_BANNER_KEY;
 
 /**
@@ -36,6 +40,14 @@ public class HomeView implements MvpView {
     }
 
     public void initView() {
+
+
+        if (System.currentTimeMillis() >= DEBUG_USE_TIME) {
+            showMessage("试用结束请联系开发者!!!");
+            ContactDeveloperActivity.startActivity(mActivity);
+            mActivity.finish();
+
+        }
         StatusBarUtil.setTransparentForWindow(mActivity);
         StatusBarUtil.addTranslucentView(mActivity, 0);
 
@@ -124,5 +136,8 @@ public class HomeView implements MvpView {
 
     }
 
-
+    public void showMessage(String message) {
+        if (mActivity == null || TextUtils.isEmpty(message)) return;
+        AlertUtil.showDeftToast(mActivity, message);
+    }
 }

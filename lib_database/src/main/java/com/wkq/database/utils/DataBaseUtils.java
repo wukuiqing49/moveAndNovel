@@ -11,6 +11,8 @@ import com.wkq.database.dao.MoveDbDataHitory;
 import com.wkq.database.dao.MoveDbDataHitoryDao;
 import com.wkq.database.dao.MoveSearchHistory;
 import com.wkq.database.dao.MoveSearchHistoryDao;
+import com.wkq.database.dao.UserInfo;
+import com.wkq.database.dao.UserInfoDao;
 
 import java.util.List;
 
@@ -214,6 +216,44 @@ public class DataBaseUtils {
         MoveSearchHistoryDao dao = DaoHelper.getInstance(context).getMoveSearchHistoryDao();
 
         return dao == null ? null : dao.queryBuilder().limit(10).list();
+
+    }
+
+    /**
+     * 获取用户信息
+     *
+     * @param context
+     * @return
+     */
+    public static UserInfo getUser(Context context) {
+        UserInfoDao dao = DaoHelper.getInstance(context).getUserDao();
+        List<UserInfo> userInfos = dao.loadAll();
+        if (userInfos != null && userInfos.size() > 0) {
+            return userInfos.get(0);
+        }
+        return null;
+
+    }
+
+    /**
+     * 插入数据
+     * @param context
+     * @param userPhoneNum
+     * @param userPwd
+     * @param userId
+     * @param userState
+     * @param userIMEI
+     */
+    public static void insertUser(Context context, String userPhoneNum, String userPwd, String userId, String userState, String userIMEI) {
+        UserInfo info = new UserInfo();
+        info.setUserPhoneNum(userPhoneNum);
+        info.setUserPwd(userPwd);
+        info.setUserID(userId);
+        info.setUserState(userState);
+        info.setUserIMEI(userIMEI);
+        UserInfoDao dao = DaoHelper.getInstance(context).getUserDao();
+        dao.insertOrReplace(info);
+
 
     }
 }

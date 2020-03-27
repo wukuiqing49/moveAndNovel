@@ -8,7 +8,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.wkq.base.frame.mosby.delegate.MvpView;
 import com.wkq.baseLib.utlis.AlertUtil;
+import com.wkq.baseLib.utlis.AppUtil;
 import com.wkq.baseLib.utlis.PixelsUtil;
+import com.wkq.order.BuildConfig;
 import com.wkq.order.modlue.developer.model.DeveloperInfo;
 import com.wkq.order.modlue.developer.ui.activity.ApiTestActivity;
 import com.wkq.order.modlue.developer.ui.activity.NovelDownLoadActivity;
@@ -24,6 +26,8 @@ import com.wkq.order.utils.DataBindingAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import cn.iwgang.countdownview.CountdownView;
 
 /**
  * 作者:吴奎庆
@@ -100,6 +104,20 @@ public class DeveloperView implements MvpView {
                 }
             }
         });
+
+
+        mFragment.binding.cDv.start(1588342180); // Millisecond
+
+
+// or
+        for (int time = 0; time < 1000; time++) {
+            mFragment.binding.cDv.updateShow(time);
+        }
+
+        String version = AppUtil.getVersionName(mFragment.getActivity());
+
+        mFragment.binding.tvVersion.setText("内侧测版本: " + version);
+
     }
 
     private void initTobBar() {

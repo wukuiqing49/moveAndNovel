@@ -41,4 +41,5 @@ public class Constant {
     public static String DOMOB_SPLASH_AD = "A0501041089";
     public static String AD_UMI_APPID = "6870c88c20ca17c0";
     public static String AD_UMI_PASSWORLD = "4ac3cfc4f669e026";
+    public static long DEBUG_USE_TIME = 1588342180000l;
 }

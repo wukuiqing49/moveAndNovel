@@ -7,10 +7,12 @@ import android.os.Bundle;
 
 import com.umeng.analytics.MobclickAgent;
 import com.wkq.base.frame.activity.MvpBindingActivity;
+import com.wkq.baseLib.utlis.AlertUtil;
 import com.wkq.order.R;
 import com.wkq.order.databinding.ActivityHomeBinding;
 import com.wkq.order.modlue.main.frame.presenter.HomePresenter;
 import com.wkq.order.modlue.main.frame.view.HomeView;
+import com.wkq.order.utils.BackTowPressed;
 
 /**
  * 作者:吴奎庆
@@ -48,5 +50,14 @@ public class HomeActivity  extends MvpBindingActivity<HomeView, HomePresenter, A
     public void onPause() {
         super.onPause();
         MobclickAgent.onPause(this);
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (BackTowPressed.onBackPressed()) {
+            super.onBackPressed();
+        } else {
+            AlertUtil.showDeftToast(this, "再次点击退出V影讯");
+        }
     }
 }

@@ -214,14 +214,16 @@ dependencies {
     implementation 'com.qmuiteam:qmui:1.1.5'
     implementation 'com.umeng.umsdk:analytics:8.0.0'
     implementation 'com.umeng.umsdk:common:2.0.0'
-    //多盟
-    implementation(name: 'domob-unionads-1.0.0', ext: 'aar')
-    implementation(name: 'domob-ads-2.1.1', ext: 'aar')
-    implementation(name: 'GDTSDK.union.4.90.960', ext: 'aar')
+    //uuid获取
+    implementation(name: 'msa_mdid_1.0.13', ext: 'aar')
+
     //侧滑删除
     implementation 'com.github.mcxtzhang:SwipeDelMenuLayout:V1.3.0'
 
-    implementation(name: 'YoumiSdk_v8.3.0_2018-10-11', ext: 'aar')
+
     implementation project(path: ':lib_move')
+    //倒计时
+
+    implementation 'com.github.iwgang:countdownview:2.1.6'
 
 }

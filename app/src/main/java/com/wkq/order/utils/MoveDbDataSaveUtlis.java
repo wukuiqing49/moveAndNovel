@@ -7,7 +7,7 @@ import android.util.Log;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.wkq.baseLib.utlis.SharedPreferencesHelper;
-import com.wkq.order.modlue.login.MoveDbMoveType;
+import com.wkq.order.modlue.login.frame.model.MoveDbMoveType;
 import com.wkq.order.modlue.main.modle.BannerInfo;
 
 import org.json.JSONArray;
