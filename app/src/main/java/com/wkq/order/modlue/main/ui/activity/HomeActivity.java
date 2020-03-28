@@ -56,8 +56,10 @@ public class HomeActivity  extends MvpBindingActivity<HomeView, HomePresenter, A
     public void onBackPressed() {
         if (BackTowPressed.onBackPressed()) {
             super.onBackPressed();
+
+
         } else {
-            AlertUtil.showDeftToast(this, "再次点击退出V影讯");
+            AlertUtil.showDeftToast(this, "再次点击退出,影讯");
         }
     }
 }

@@ -34,7 +34,9 @@
 
 
             <EditText
+
                 android:id="@+id/et_search"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -45,10 +47,10 @@
                 android:layout_toLeftOf="@+id/rl_search"
                 android:layout_toRightOf="@+id/rl_back"
                 android:background="@null"
-                android:gravity="left"
+                android:gravity="center_horizontal"
                 android:hint="请输入您要搜索的电影名字"
                 android:textColor="@color/white"
-                android:textColorHint="@color/white"
+                android:textColorHint="@color/color_999"
                 android:textSize="15sp" />
 
 

@@ -105,7 +105,12 @@ android {
     android.applicationVariants.all { variant ->
         variant.outputs.all {
             //Apk重命名
-            outputFileName = "${appName}-${variant.versionName}-${variant.name}.apk"
+            if(variant.buildType.name.equals("debug")){
+//                outputFileName = "${appName}-${variant.versionName}-${variant.name}.apk"
+                outputFileName = "${appName}-${variant.name}.apk"
+            }else{
+                outputFileName = "${appName}--${variant.versionName}-${variant.name}.apk"
+            }
         }
     }
 
@@ -132,6 +137,12 @@ android {
     }
     dexOptions {
         javaMaxHeapSize '4g'
+    }
+    //处理权限报错的问题
+    configurations.all {
+        resolutionStrategy {
+            force 'com.android.support:support-v4:27.1.1'
+        }
     }
 
 }
@@ -225,5 +236,8 @@ dependencies {
     //倒计时
 
     implementation 'com.github.iwgang:countdownview:2.1.6'
+    //引导图
+    implementation 'com.binioter:guideview:1.0.0'
+
 
 }

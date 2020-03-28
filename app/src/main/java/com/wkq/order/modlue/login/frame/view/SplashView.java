@@ -61,6 +61,7 @@ public class SplashView implements MvpView {
             showMessage("已过期,请联系开发者");
             ContactDeveloperActivity.startActivity(mActivity);
             mActivity.finish();
+            return;
         }
         StatusBarUtil.setTransparentForWindow(mActivity);
         StatusBarUtil.addTranslucentView(mActivity, 0);

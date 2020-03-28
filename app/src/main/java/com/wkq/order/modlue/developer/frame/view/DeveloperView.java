@@ -10,6 +10,7 @@ import com.wkq.base.frame.mosby.delegate.MvpView;
 import com.wkq.baseLib.utlis.AlertUtil;
 import com.wkq.baseLib.utlis.AppUtil;
 import com.wkq.baseLib.utlis.PixelsUtil;
+import com.wkq.baseLib.utlis.SharedPreferencesHelper;
 import com.wkq.order.BuildConfig;
 import com.wkq.order.modlue.developer.model.DeveloperInfo;
 import com.wkq.order.modlue.developer.ui.activity.ApiTestActivity;
@@ -20,8 +21,10 @@ import com.wkq.order.modlue.developer.ui.fragment.DeveloperFragment;
 import com.wkq.order.modlue.main.ui.activity.AboutActivity;
 import com.wkq.order.modlue.main.ui.activity.AdAboutActivity;
 import com.wkq.order.modlue.main.ui.activity.ContactDeveloperActivity;
+import com.wkq.order.modlue.main.ui.activity.NovelHelperActivity;
 import com.wkq.order.modlue.main.ui.activity.PlayHelperActivity;
 import com.wkq.order.modlue.web.ui.VideoWebListActivity;
+import com.wkq.order.utils.Constant;
 import com.wkq.order.utils.DataBindingAdapter;
 
 import java.util.ArrayList;
@@ -41,6 +44,7 @@ import cn.iwgang.countdownview.CountdownView;
 public class DeveloperView implements MvpView {
 
     DeveloperFragment mFragment;
+    private DeveloperAdapter moviesAdapter;
 
     public DeveloperView(DeveloperFragment fragment) {
         mFragment = fragment;
@@ -51,7 +55,7 @@ public class DeveloperView implements MvpView {
         initTobBar();
 
 
-        DeveloperAdapter moviesAdapter = new DeveloperAdapter(mFragment.getActivity());
+        moviesAdapter = new DeveloperAdapter(mFragment.getActivity());
         mFragment.binding.rvDeveloper.setLayoutManager(new LinearLayoutManager(mFragment.getActivity()));
         mFragment.binding.rvDeveloper.setAdapter(moviesAdapter);
 
@@ -59,8 +63,9 @@ public class DeveloperView implements MvpView {
         list.add(new DeveloperInfo(6, "小说订阅"));
         list.add(new DeveloperInfo(7, "小说历史"));
 
-//        list.add(new DeveloperInfo(0, "播放视频"));
-//        list.add(new DeveloperInfo(1, "播放帮助"));
+//        list.add(new DeveloperInfo(0, "电影播放"));
+        list.add(new DeveloperInfo(1, "播放电影帮助"));
+        list.add(new DeveloperInfo(8, "小说阅读帮助"));
 //        list.add(new DeveloperInfo(2, "广告介绍"));
 
         list.add(new DeveloperInfo(3, "联系开发者"));
@@ -100,20 +105,16 @@ public class DeveloperView implements MvpView {
                     case 7:
                         NovelDownLoadActivity.startActivity(mFragment.getActivity());
                         break;
+                    case 8:
+                        NovelHelperActivity.startPlayHelperActivity(mFragment.getActivity());
+                        break;
 
                 }
             }
         });
 
-
-        mFragment.binding.cDv.start(1588342180); // Millisecond
-
-
-// or
-        for (int time = 0; time < 1000; time++) {
-            mFragment.binding.cDv.updateShow(time);
-        }
-
+        long times = Constant.DEBUG_USE_TIME - System.currentTimeMillis();
+        mFragment.binding.cDv.start(times);
         String version = AppUtil.getVersionName(mFragment.getActivity());
 
         mFragment.binding.tvVersion.setText("内侧测版本: " + version);
@@ -145,5 +146,11 @@ public class DeveloperView implements MvpView {
         if (mFragment == null || TextUtils.isEmpty(message)) return;
 
         AlertUtil.showDeftToast(mFragment.getActivity(), message);
+    }
+
+    public void initGuide() {
+
+        boolean isFirst = SharedPreferencesHelper.getInstance(mFragment.getActivity()).getBoolean("isDevelopeFirst", true);
+        moviesAdapter.showGuide(isFirst);
     }
 }

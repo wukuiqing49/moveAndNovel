@@ -1,5 +1,6 @@
 package com.wkq.order.modlue.move.frame.view;
 
+import android.text.TextUtils;
 import android.view.View;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -85,7 +86,7 @@ public class SearchMTiemView implements MvpView {
             if (mActivity != null && mActivity.getPresenter() != null) {
                 KeyboardUtils.hideSoftInput(mActivity);
                 if (DoublePressed.onDoublePressed()) return;
-                if (mActivity.binding.etSearch.getText() != null) {
+                if (!TextUtils.isEmpty(mActivity.binding.etSearch.getText().toString())) {
                     showLoading();
                     moveSearchHistoryAdapter.removeAllItems();
                     mActivity.getPresenter().searchData(mActivity, mActivity.binding.etSearch.getText().toString());
@@ -147,6 +148,7 @@ public class SearchMTiemView implements MvpView {
             mActivity.binding.rlSearchHisory.setVisibility(View.GONE);
             mActivity.binding.rlEmpty.setVisibility(View.GONE);
             if (data.getData() != null && data.getData().getValue() != null && data.getData().getValue().getMovieResult() != null && data.getData().getValue().getMovieResult().getMoreMovies() != null) {
+                moveDbComingAdapter.removeAllItems();
                 moveDbComingAdapter.addItems(data.getData().getValue().getMovieResult().getMoreMovies());
             } else {
                 mActivity.binding.rvSf.setVisibility(View.GONE);

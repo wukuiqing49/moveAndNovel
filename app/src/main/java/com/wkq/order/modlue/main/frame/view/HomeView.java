@@ -6,21 +6,18 @@ import android.view.View;
 import androidx.core.content.ContextCompat;
 import androidx.viewpager.widget.ViewPager;
 
-
 import com.wkq.base.frame.mosby.delegate.MvpView;
 import com.wkq.baseLib.utlis.AlertUtil;
-import com.wkq.database.utils.DataBaseUtils;
-import com.wkq.order.modlue.main.ui.activity.ContactDeveloperActivity;
-import com.wkq.order.utils.Constant;
-import com.wkq.order.utils.StatusBarUtil;
 import com.wkq.order.R;
+import com.wkq.order.modlue.main.observable.HomePageChangeObservable;
+import com.wkq.order.modlue.main.ui.activity.ContactDeveloperActivity;
 import com.wkq.order.modlue.main.ui.activity.HomeActivity;
 import com.wkq.order.modlue.main.ui.adapter.HomeFragmentPagerAdapter;
 import com.wkq.order.modlue.main.ui.widget.QMUITabSegment;
 import com.wkq.order.modlue.web.ui.VideoWebListActivity;
+import com.wkq.order.utils.StatusBarUtil;
 
 import static com.wkq.order.utils.Constant.DEBUG_USE_TIME;
-import static com.wkq.order.utils.Constant.MOVE_DB_HOME_BANNER_KEY;
 
 /**
  * 作者:吴奎庆
@@ -61,7 +58,7 @@ public class HomeView implements MvpView {
         QMUITabSegment.Tab util = new QMUITabSegment.Tab(
                 ContextCompat.getDrawable(mActivity, R.drawable.ic_index_dashboard_gray),
                 ContextCompat.getDrawable(mActivity, R.drawable.ic_index_dashboard),
-                "资讯", false);
+                "排行", false);
         QMUITabSegment.Tab novel = new QMUITabSegment.Tab(
                 ContextCompat.getDrawable(mActivity, R.drawable.ic_index_notifications_gray),
                 ContextCompat.getDrawable(mActivity, R.drawable.ic_index_notifications),
@@ -110,11 +107,12 @@ public class HomeView implements MvpView {
         mActivity.binding.pager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
+                HomePageChangeObservable.newInstance().updateChange(position);
             }
 
             @Override
             public void onPageSelected(int position) {
+
                 if (position == 0) {
                     mActivity.binding.cdPlay.setVisibility(View.GONE);
 

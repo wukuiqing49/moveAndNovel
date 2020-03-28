@@ -128,8 +128,8 @@ public class MoveDbComingView implements MvpView {
         webInfos.add(new MovesTobWebInfo("https://www.iqiyi.com/", "爱奇艺", pics.get(sr.nextInt(END))));
         webInfos.add(new MovesTobWebInfo("https://www.youku.com/", "优酷视频", pics.get(sr.nextInt(END))));
         webInfos.add(new MovesTobWebInfo("https://tv.sohu.com/", "搜狐视频", pics.get(sr.nextInt(END))));
-        webInfos.add(new MovesTobWebInfo("http://www.pptv.com/", "PPTV视频", pics.get(sr.nextInt(END))));
-        webInfos.add(new MovesTobWebInfo("http://www.le.com/", "乐视视频", pics.get(sr.nextInt(END))));
+//        webInfos.add(new MovesTobWebInfo("http://www.pptv.com/", "PPTV视频", pics.get(sr.nextInt(END))));
+//        webInfos.add(new MovesTobWebInfo("http://www.le.com/", "乐视视频", pics.get(sr.nextInt(END))));
 
         movesTopWebAdapter.addItems(webInfos);
 

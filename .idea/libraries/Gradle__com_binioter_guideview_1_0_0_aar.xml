@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.binioter:guideview:1.0.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d317f0821cedd9a0d1b2b3f9122e4d97/jetified-guideview-1.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d317f0821cedd9a0d1b2b3f9122e4d97/jetified-guideview-1.0.0/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.binioter/guideview/1.0.0/5f605dce3cea7777b2343f9c388d3be8522d83b/guideview-1.0.0-javadoc.jar!/" />
+    </JAVADOC>
+    <LIBRARY_FILE />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.binioter/guideview/1.0.0/f256c8307e2fd8e54f31be619b4c69e5ecd93104/guideview-1.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

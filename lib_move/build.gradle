@@ -34,7 +34,7 @@ dependencies {
 //    implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation 'androidx.appcompat:appcompat:1.1.0'
-    provided 'org.jsoup:jsoup:1.12.2'
+    compileOnly 'org.jsoup:jsoup:1.12.2'
 
     implementation "io.reactivex.rxjava2:rxjava:$rootProject.rxJava"
     implementation "io.reactivex.rxjava2:rxandroid:$rootProject.rxAndroid"

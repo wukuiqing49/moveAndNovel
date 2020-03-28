@@ -5,11 +5,15 @@ import android.view.View;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import com.binioter.guideview.Component;
+import com.binioter.guideview.Guide;
+import com.binioter.guideview.GuideBuilder;
 import com.bumptech.glide.Glide;
 import com.google.android.material.appbar.AppBarLayout;
 import com.wkq.base.frame.mosby.delegate.MvpView;
 import com.wkq.baseLib.utlis.AlertUtil;
 import com.wkq.baseLib.utlis.DateTimeUtil;
+import com.wkq.baseLib.utlis.SharedPreferencesHelper;
 import com.wkq.net.BaseInfo;
 import com.wkq.net.model.MTimeMoveDetailInfo;
 import com.wkq.order.modlue.htmlmove.ui.activity.MoveHtmlActivity;
@@ -17,6 +21,7 @@ import com.wkq.order.modlue.htmlmove.ui.activity.ProcessVideoActivity;
 import com.wkq.order.modlue.htmlmove.ui.adapter.MoveHtmlCreditsAdapter;
 import com.wkq.order.modlue.htmlmove.ui.adapter.MoveHtmlImgsAdapter;
 import com.wkq.order.modlue.htmlmove.ui.adapter.MoveStringAdapter;
+import com.wkq.order.modlue.htmlmove.ui.widget.SimpleComponent;
 import com.wkq.order.modlue.move.ui.PreviewImageActivity;
 import com.wkq.order.modlue.web.ui.FullVideoActivity;
 import com.wkq.order.utils.DataBindingAdapter;
@@ -40,17 +45,21 @@ import cn.jzvd.JZVideoPlayerStandard;
 
 public class MoveHtmlView implements MvpView {
     MoveHtmlActivity mActivity;
-
-
     private MoveHtmlImgsAdapter imgsAdapter;
     private MoveStringAdapter awardAdapter;
     private MoveHtmlCreditsAdapter creditsAdapter;
+
+    List<String> wites = new ArrayList<>();
 
     public MoveHtmlView(MoveHtmlActivity mActivity) {
         this.mActivity = mActivity;
     }
 
     public void initView() {
+        wites.add("腾讯");
+        wites.add("爱奇艺");
+        wites.add("优酷");
+        wites.add("搜狐视频");
 
 
         initToolBar();
@@ -79,6 +88,35 @@ public class MoveHtmlView implements MvpView {
         });
 
 
+    }
+
+    private void showGuideView() {
+
+
+        GuideBuilder builder = new GuideBuilder();
+        builder.setTargetView(mActivity.binding.cdPlay)
+                .setAlpha(150)
+
+                .setHighTargetCorner(20)
+                .setHighTargetPadding(10);
+
+        builder.setHighTargetGraphStyle(Component.CIRCLE);
+
+        builder.setOnVisibilityChangedListener(new GuideBuilder.OnVisibilityChangedListener() {
+            @Override
+            public void onShown() {
+
+            }
+
+            @Override
+            public void onDismiss() {
+                SharedPreferencesHelper.getInstance(mActivity).setValue("movePlayFirst", false);
+            }
+        });
+
+        builder.addComponent(new SimpleComponent());
+        Guide guide = builder.createGuide();
+        guide.show(mActivity);
     }
 
     private void initToolBar() {
@@ -198,8 +236,23 @@ public class MoveHtmlView implements MvpView {
         mActivity.binding.raStar.setStar(starf);
 
         if (data.getData().getPlaylist() != null && data.getData().getPlaylist().size() > 0) {
+            for (MTimeMoveDetailInfo.PlaylistBean playlistBean : data.getData().getPlaylist()) {
+                if (wites.indexOf(playlistBean.getPlaySourceName()) >= 0) {
+                    mActivity.binding.cdPlay.setVisibility(View.VISIBLE);
+                    break;
+                }
+            }
 
-            mActivity.binding.cdPlay.setVisibility(View.VISIBLE);
+            boolean isFirst = SharedPreferencesHelper.getInstance(mActivity).getBoolean("movePlayFirst", true);
+
+            if (mActivity.binding.cdPlay.getVisibility() == View.VISIBLE &&isFirst) {
+                mActivity.binding.cdPlay.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        showGuideView();
+                    }
+                });
+            }
 
             mActivity.binding.cdPlay.setOnClickListener(new View.OnClickListener() {
                 @Override

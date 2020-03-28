@@ -8,10 +8,15 @@ import androidx.annotation.Nullable;
 import androidx.databinding.ViewDataBinding;
 
 import com.wkq.base.frame.fragment.MvpBindingFragment;
+import com.wkq.baseLib.utlis.SharedPreferencesHelper;
 import com.wkq.order.R;
 import com.wkq.order.databinding.FragmentNovelBinding;
+import com.wkq.order.modlue.main.observable.HomePageChangeObservable;
 import com.wkq.order.modlue.novel.frame.presenter.NobelPresenter;
 import com.wkq.order.modlue.novel.frame.view.NovelView;
+
+import java.util.Observable;
+import java.util.Observer;
 
 /**
  * 作者:吴奎庆
@@ -22,7 +27,7 @@ import com.wkq.order.modlue.novel.frame.view.NovelView;
  */
 
 
-public class NovelFragment extends MvpBindingFragment<NovelView, NobelPresenter, FragmentNovelBinding> {
+public class NovelFragment extends MvpBindingFragment<NovelView, NobelPresenter, FragmentNovelBinding> implements Observer {
 
 
 
@@ -42,8 +47,27 @@ public class NovelFragment extends MvpBindingFragment<NovelView, NobelPresenter,
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        HomePageChangeObservable.newInstance().addObserver(this);
         if (getMvpView()!=null)getMvpView().initView();
         if (getPresenter()!=null)getPresenter().getData(this);
+
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        HomePageChangeObservable.newInstance().deleteObserver(this);
+    }
+
+    @Override
+    public void update(Observable observable, Object o) {
+        int pages = (int) o;
+        boolean isFirst = SharedPreferencesHelper.getInstance(getActivity()).getBoolean("isSearchNovelFirst", true);
+
+        if (observable instanceof HomePageChangeObservable && pages == 2&&isFirst ) {
+
+            if (getMvpView() != null) getMvpView().initGuide();
+        }
 
     }
 }

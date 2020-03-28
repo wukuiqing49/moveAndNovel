@@ -6,6 +6,9 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import com.binioter.guideview.Component;
+import com.binioter.guideview.Guide;
+import com.binioter.guideview.GuideBuilder;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -16,12 +19,16 @@ import com.scwang.smartrefresh.layout.header.ClassicsHeader;
 import com.scwang.smartrefresh.layout.listener.OnRefreshLoadMoreListener;
 import com.wkq.base.frame.mosby.delegate.MvpView;
 import com.wkq.baseLib.utlis.AlertUtil;
+import com.wkq.baseLib.utlis.SharedPreferencesHelper;
 import com.wkq.database.dao.MoveDbDataHitory;
 import com.wkq.database.utils.DataBaseUtils;
 import com.wkq.net.model.MoveDataInfo;
 import com.wkq.order.R;
 import com.wkq.order.modlue.htmlmove.ui.activity.MoveHtmlActivity;
 import com.wkq.order.modlue.htmlmove.ui.fragment.HomeHtmlMoveFragment;
+import com.wkq.order.modlue.htmlmove.ui.widget.SearchMoveComponent;
+import com.wkq.order.modlue.htmlmove.ui.widget.SearchNoveComponent;
+import com.wkq.order.modlue.htmlmove.ui.widget.SimpleComponent;
 import com.wkq.order.modlue.main.modle.MovesTobWebInfo;
 import com.wkq.order.modlue.htmlmove.ui.adapter.MoveHomeHtmlMTimeAdapter;
 import com.wkq.order.modlue.main.ui.adapter.MovesTopWebAdapter;
@@ -75,7 +82,6 @@ public class HomeHtmlMoveView implements MvpView {
 
 
     public void initView() {
-
         initToolBar();
         initRefush();
         initBanner();
@@ -104,6 +110,8 @@ public class HomeHtmlMoveView implements MvpView {
 
     }
 
+
+
     /**
      * 初始化顶部 网址数据
      */
@@ -124,8 +132,8 @@ public class HomeHtmlMoveView implements MvpView {
 
 //        webInfos.add(new MovesTobWebInfo("https://www.bilibili.com/", "B站", R.mipmap.movie_10));
         webInfos.add(new MovesTobWebInfo("https://tv.sohu.com/", "搜狐视频", R.mipmap.movie_6));
-        webInfos.add(new MovesTobWebInfo("http://www.pptv.com/", "PPTV视频", R.mipmap.movie_7));
-        webInfos.add(new MovesTobWebInfo("http://www.le.com/", "乐视视频", R.mipmap.movie_8));
+//        webInfos.add(new MovesTobWebInfo("http://www.pptv.com/", "PPTV视频", R.mipmap.movie_7));
+//        webInfos.add(new MovesTobWebInfo("http://www.le.com/", "乐视视频", R.mipmap.movie_8));
 
 
         movesTopWebAdapter.addItems(webInfos);
@@ -255,6 +263,43 @@ public class HomeHtmlMoveView implements MvpView {
         AlertUtil.showDeftToast(mFragment.getActivity(), message);
 
     }
+
+
+    public void initGuide() {
+        mFragment.binding.rvWeb.post(new Runnable() {
+            @Override
+            public void run() {
+                showGuideView();
+            }
+        });
+    }
+    private void showGuideView() {
+
+
+        GuideBuilder builder = new GuideBuilder();
+        builder.setTargetView(mFragment.binding.rvWeb)
+                .setAlpha(150)
+                .setHighTargetCorner(20)
+                .setHighTargetPadding(10);
+
+        builder.setHighTargetGraphStyle(Component.ROUNDRECT);
+
+        builder.setOnVisibilityChangedListener(new GuideBuilder.OnVisibilityChangedListener() {
+            @Override
+            public void onShown() {
+            }
+
+            @Override
+            public void onDismiss() {
+                SharedPreferencesHelper.getInstance(mFragment.getActivity()).setValue("isHomeFirst", false);
+            }
+        });
+
+        builder.addComponent(new SearchMoveComponent());
+        Guide guide = builder.createGuide();
+        guide.show(mFragment.getActivity());
+    }
+
 
 
 }

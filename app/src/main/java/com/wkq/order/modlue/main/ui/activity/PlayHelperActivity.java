@@ -47,7 +47,7 @@ public class PlayHelperActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_play_help);
-
+        binding.tvTitle.setText("电影播放文档");
         StatusBarUtil.setStatusBarWrite(this);
         StatusBarUtil.setColor(this, this.getResources().getColor(R.color.color_2b2b2b), 0);
         StatusBarUtil.setDarkMode(this);
@@ -59,12 +59,12 @@ public class PlayHelperActivity extends AppCompatActivity {
 
 
     private void initData() {
-        steps.add(new PlayHelpInfo(R.mipmap.play_0, "第1步"));
-        steps.add(new PlayHelpInfo(R.mipmap.play_1, "第2步"));
-        steps.add(new PlayHelpInfo(R.mipmap.play_2, "第3步"));
-        steps.add(new PlayHelpInfo(R.mipmap.play_3, "第4步"));
-        steps.add(new PlayHelpInfo(R.mipmap.play_4, "第5步"));
-        steps.add(new PlayHelpInfo(R.mipmap.play_5, "第6步"));
+        steps.add(new PlayHelpInfo(R.mipmap.iv_move_help_1, "第1步"));
+        steps.add(new PlayHelpInfo(R.mipmap.iv_move_help_2, "第2步"));
+        steps.add(new PlayHelpInfo(R.mipmap.iv_move_help_3, "第3步"));
+        steps.add(new PlayHelpInfo(R.mipmap.iv_move_help_4, "第4步"));
+        steps.add(new PlayHelpInfo(R.mipmap.iv_move_help_5, "第5步"));
+        steps.add(new PlayHelpInfo(R.mipmap.iv_move_help_6, "第6步"));
     }
 
     private void initView() {

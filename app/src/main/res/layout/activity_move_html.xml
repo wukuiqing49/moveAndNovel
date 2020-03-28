@@ -23,7 +23,7 @@
         android:background="@color/color_f4f4f4">
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:visibility="gone"
+
             android:id="@+id/cd_play"
             android:layout_width="50dp"
             android:layout_height="50dp"
@@ -36,7 +36,7 @@
             android:clickable="true"
             android:scaleType="fitCenter"
             android:src="@mipmap/iv_video_play"
-
+            android:visibility="invisible"
             app:borderWidth="0dp"
             app:elevation="5dp"
             app:fabCustomSize="50dp"

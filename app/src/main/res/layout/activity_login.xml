@@ -54,7 +54,7 @@
                 android:hint="请输入手机号"
                 android:inputType="number"
                 android:textColor="@color/color_666"
-                android:textColorHint="@color/color_333"
+                android:textColorHint="@color/color_999"
                 android:textSize="15sp" />
 
 
@@ -74,7 +74,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:text="密  码:"
+                android:text="密    码:"
                 android:textSize="15sp" />
 
             <EditText
@@ -85,8 +85,9 @@
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="10dp"
                 android:hint="请输入密码"
+
                 android:textColor="@color/color_666"
-                android:textColorHint="@color/color_333"
+                android:textColorHint="@color/color_999"
                 android:textSize="15sp" />
 
 

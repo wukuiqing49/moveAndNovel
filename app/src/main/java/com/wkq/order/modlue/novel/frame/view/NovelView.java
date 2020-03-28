@@ -6,8 +6,14 @@ import android.view.View;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import com.binioter.guideview.Component;
+import com.binioter.guideview.Guide;
+import com.binioter.guideview.GuideBuilder;
 import com.wkq.base.frame.mosby.delegate.MvpView;
 import com.wkq.baseLib.utlis.AlertUtil;
+import com.wkq.baseLib.utlis.SharedPreferencesHelper;
+import com.wkq.order.modlue.htmlmove.ui.widget.SearchMoveComponent;
+import com.wkq.order.modlue.htmlmove.ui.widget.SearchNoveComponent;
 import com.wkq.order.utils.StatusBarUtil;
 import com.wkq.order.R;
 import com.wkq.order.modlue.novel.ui.activity.rank.RankActivity;
@@ -85,6 +91,42 @@ public class NovelView implements MvpView {
           mFragment.getActivity().startActivity(intent);
         });
     }
+
+    public void initGuide() {
+        mFragment.binding.cdSearch.post(new Runnable() {
+            @Override
+            public void run() {
+                showGuideView();
+            }
+        });
+    }
+    private void showGuideView() {
+
+
+        GuideBuilder builder = new GuideBuilder();
+        builder.setTargetView(mFragment.binding.cdSearch)
+                .setAlpha(150)
+                .setHighTargetCorner(20)
+                .setHighTargetPadding(20);
+
+        builder.setHighTargetGraphStyle(Component.CIRCLE);
+
+        builder.setOnVisibilityChangedListener(new GuideBuilder.OnVisibilityChangedListener() {
+            @Override
+            public void onShown() {
+            }
+
+            @Override
+            public void onDismiss() {
+                SharedPreferencesHelper.getInstance(mFragment.getActivity()).setValue("isSearchNovelFirst", false);
+            }
+        });
+
+        builder.addComponent(new SearchNoveComponent());
+        Guide guide = builder.createGuide();
+        guide.show(mFragment.getActivity());
+    }
+
 
     public void setData(HottestRank hottestRank) {
         mAdapter.addItems(hottestRank.getHottestRankClassifies());

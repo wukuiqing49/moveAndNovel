@@ -79,6 +79,39 @@
                 android:textColor="@color/color_23d41e"
                 />
 
+        </LinearLayout><LinearLayout
+            android:id="@+id/ll_qq_group"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/shape_living_count_bg"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="QQ交流群 :"
+                android:textStyle="bold"
+                android:textSize="19sp"
+                android:textColor="@color/color_333"
+                />
+
+            <TextView
+                android:layout_gravity="center_vertical"
+
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="688644721"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:textColor="@color/color_23d41e"
+                />
+
         </LinearLayout>
 
         <LinearLayout

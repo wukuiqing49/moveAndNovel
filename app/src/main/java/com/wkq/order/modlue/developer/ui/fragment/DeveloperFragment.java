@@ -6,10 +6,15 @@ import android.view.View;
 import androidx.annotation.Nullable;
 
 import com.wkq.base.frame.fragment.MvpBindingFragment;
+import com.wkq.baseLib.utlis.SharedPreferencesHelper;
 import com.wkq.order.R;
 import com.wkq.order.databinding.FragmentDeveloperBinding;
 import com.wkq.order.modlue.developer.frame.presenter.DeveloperPresenter;
 import com.wkq.order.modlue.developer.frame.view.DeveloperView;
+import com.wkq.order.modlue.main.observable.HomePageChangeObservable;
+
+import java.util.Observable;
+import java.util.Observer;
 
 /**
  * 作者:吴奎庆
@@ -20,7 +25,7 @@ import com.wkq.order.modlue.developer.frame.view.DeveloperView;
  */
 
 
-public class DeveloperFragment extends MvpBindingFragment<DeveloperView, DeveloperPresenter, FragmentDeveloperBinding> {
+public class DeveloperFragment extends MvpBindingFragment<DeveloperView, DeveloperPresenter, FragmentDeveloperBinding> implements Observer {
 
     public static DeveloperFragment newInstance() {
 
@@ -40,7 +45,24 @@ public class DeveloperFragment extends MvpBindingFragment<DeveloperView, Develop
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
+        HomePageChangeObservable.newInstance().addObserver(this);
         if (getMvpView() != null) getMvpView().initView();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        HomePageChangeObservable.newInstance().deleteObserver(this);
+    }
+
+    @Override
+    public void update(Observable observable, Object o) {
+        int pages = (int) o;
+
+        if (observable instanceof HomePageChangeObservable && pages == 3 ) {
+
+            if (getMvpView() != null) getMvpView().initGuide();
+        }
+
     }
 }

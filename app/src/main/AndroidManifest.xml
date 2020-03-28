@@ -67,7 +67,7 @@
             android:name=".modlue.main.ui.activity.HomeActivity"
             android:configChanges="keyboardHidden|screenSize|orientation|smallestScreenSize|screenLayout"
             android:hardwareAccelerated="true"
-            android:launchMode="singleTop"
+            android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <!-- WebView -->
@@ -123,6 +123,13 @@
             android:theme="@style/AppTheme" />
         <activity
             android:name=".modlue.main.ui.activity.PlayHelperActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".modlue.main.ui.activity.NovelHelperActivity"
             android:configChanges="keyboardHidden|screenSize|orientation|smallestScreenSize|screenLayout"
             android:hardwareAccelerated="true"
             android:launchMode="singleTop"

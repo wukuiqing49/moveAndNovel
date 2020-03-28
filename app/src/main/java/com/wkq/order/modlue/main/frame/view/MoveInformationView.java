@@ -2,19 +2,20 @@ package com.wkq.order.modlue.main.frame.view;
 
 import android.content.Context;
 import android.graphics.Color;
-import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 
+import com.binioter.guideview.Component;
+import com.binioter.guideview.Guide;
+import com.binioter.guideview.GuideBuilder;
 import com.wkq.base.frame.mosby.delegate.MvpView;
-import com.wkq.order.modlue.move.ui.SearchMTimeActivity;
-import com.wkq.order.utils.StatusBarUtil;
-
+import com.wkq.baseLib.utlis.SharedPreferencesHelper;
 import com.wkq.order.R;
-
-import com.wkq.order.modlue.main.ui.activity.SearchActivity;
+import com.wkq.order.modlue.htmlmove.ui.widget.SearchMoveComponent;
 import com.wkq.order.modlue.main.ui.adapter.MoveFragmentPagerAdapter;
 import com.wkq.order.modlue.main.ui.fragment.MoveInformationFragment;
+import com.wkq.order.modlue.move.ui.SearchMTimeActivity;
+import com.wkq.order.utils.StatusBarUtil;
 
 import net.lucode.hackware.magicindicator.MagicIndicator;
 import net.lucode.hackware.magicindicator.ViewPagerHelper;
@@ -29,10 +30,6 @@ import net.lucode.hackware.magicindicator.buildins.commonnavigator.titles.Simple
 
 import java.util.ArrayList;
 import java.util.List;
-
-import wkq.com.lib_move.site.MTimeSite;
-import wkq.com.lib_move.utlis.MoveDataCallBack;
-import wkq.com.lib_move.utlis.MoveHtmlUtlis;
 
 /**
  * 作者:吴奎庆
@@ -111,6 +108,41 @@ public class MoveInformationView implements MvpView {
             SearchMTimeActivity.startSearch(mFragment.getActivity());
         });
 
+    }
+
+    public void initGuide() {
+        mFragment.binding.rlSearch.post(new Runnable() {
+            @Override
+            public void run() {
+                showGuideView();
+            }
+        });
+    }
+    private void showGuideView() {
+
+
+        GuideBuilder builder = new GuideBuilder();
+        builder.setTargetView(mFragment.binding.ivSearch)
+                .setAlpha(150)
+                .setHighTargetCorner(20)
+                .setHighTargetPadding(10);
+
+        builder.setHighTargetGraphStyle(Component.CIRCLE);
+
+        builder.setOnVisibilityChangedListener(new GuideBuilder.OnVisibilityChangedListener() {
+            @Override
+            public void onShown() {
+            }
+
+            @Override
+            public void onDismiss() {
+                SharedPreferencesHelper.getInstance(mFragment.getActivity()).setValue("isSearchFirst", false);
+            }
+        });
+
+        builder.addComponent(new SearchMoveComponent());
+        Guide guide = builder.createGuide();
+        guide.show(mFragment.getActivity());
     }
 
 

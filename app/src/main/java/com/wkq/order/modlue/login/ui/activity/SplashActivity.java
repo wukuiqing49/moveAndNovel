@@ -16,6 +16,8 @@ import com.wkq.order.modlue.login.frame.presenter.SplashPresenter;
 import com.wkq.order.modlue.login.frame.view.SplashView;
 import com.wkq.order.modlue.main.ui.activity.ContactDeveloperActivity;
 
+import static com.wkq.order.utils.Constant.DEBUG_USE_TIME;
+
 
 /**
  * 作者: 吴奎庆
@@ -36,11 +38,21 @@ public class SplashActivity extends MvpBindingActivity<SplashView, SplashPresent
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getMvpView() != null) getMvpView().initView();
-        if (Build.VERSION.SDK_INT >= 23) {
-            if (getMvpView() != null) getMvpView().checkPermissions();
+
+
+        if (System.currentTimeMillis() < DEBUG_USE_TIME) {
+            if (getMvpView() != null) getMvpView().initView();
+            if (Build.VERSION.SDK_INT >= 23) {
+                if (getMvpView() != null) getMvpView().checkPermissions();
+            } else {
+                if (getMvpView() != null) getMvpView().initImei();
+            }
+
         } else {
-            if (getMvpView() != null) getMvpView().initImei();
+            getMvpView().showMessage("已过期,请联系开发者");
+            ContactDeveloperActivity.startActivity(this);
+            finish();
+            return;
         }
 
 

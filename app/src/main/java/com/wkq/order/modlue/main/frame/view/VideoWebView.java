@@ -73,11 +73,11 @@ public class VideoWebView implements MvpView {
         videoList.add(new VideoWebInfo("https://v.qq.com/", "进入腾讯视频"));
         videoList.add(new VideoWebInfo("https://www.iqiyi.com/", "进入奇艺视频"));
         videoList.add(new VideoWebInfo("https://www.youku.com/", "进入优酷视频"));
-        videoList.add(new VideoWebInfo("http://www.mgtv.com/", "进入芒果视频"));
-        videoList.add(new VideoWebInfo("https://sports.qq.com/nba/", "进入腾讯体育"));
+//        videoList.add(new VideoWebInfo("http://www.mgtv.com/", "进入芒果视频"));
+//        videoList.add(new VideoWebInfo("https://sports.qq.com/nba/", "进入腾讯体育"));
         videoList.add(new VideoWebInfo("https://tv.sohu.com/", "进入搜狐视频"));
-        videoList.add(new VideoWebInfo("http://www.pptv.com/", "进入pptv视频"));
-        videoList.add(new VideoWebInfo("http://www.le.com/", "进入乐视视频"));
+//        videoList.add(new VideoWebInfo("http://www.pptv.com/", "进入pptv视频"));
+//        videoList.add(new VideoWebInfo("http://www.le.com/", "进入乐视视频"));
     }
 
 

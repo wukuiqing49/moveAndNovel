@@ -51,7 +51,8 @@ public class AboutActivity extends AppCompatActivity {
                         "<p>本软件所有数据均来源于互联网</p>\n" +
                         "<p>本软件有部分广告</p>\n" +
                         "<p>本软件仅供学习参考，切勿商业使用。接口数据均</p>\n" +
-                        "<p>来源于互联网。如有侵权，请联系删除</p>", binding.web);
+                        "<p>来源于互联网。如有侵权，请联系删除</p>\n"+
+                        "<p>请记录好账号,密码一个手机只能绑定一个账号/p>", binding.web);
     }
 
     @Override
