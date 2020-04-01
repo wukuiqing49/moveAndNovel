@@ -206,7 +206,7 @@ public class MoveHtmlView implements MvpView {
         }
 
         if (data.getData().getBasic().getVideo() != null) {
-            GlideUtlis.loadImg(mActivity, data.getData().getBasic().getVideo().getHightUrl(), mActivity.binding.ivFlower);
+            GlideUtlis.loadImg(mActivity, data.getData().getBasic().getVideo().getImg(), mActivity.binding.ivFlower);
 
             mActivity.binding.rlImg.setOnClickListener(view -> {
 
