@@ -1,11 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.qmuiteam:qmui:1.1.5@aar">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/149432b6c4d062bfc61f34c9687d3ce5/jetified-qmui-1.1.5/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a242656314554360061355ec934c2681/jetified-qmui-1.1.5/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/149432b6c4d062bfc61f34c9687d3ce5/jetified-qmui-1.1.5/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/149432b6c4d062bfc61f34c9687d3ce5/jetified-qmui-1.1.5/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a242656314554360061355ec934c2681/jetified-qmui-1.1.5/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a242656314554360061355ec934c2681/jetified-qmui-1.1.5/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.qmuiteam/qmui/1.1.5/db5565affb348ff573fe1a0de8773e5b8ce5eaa2/qmui-1.1.5-javadoc.jar!/" />

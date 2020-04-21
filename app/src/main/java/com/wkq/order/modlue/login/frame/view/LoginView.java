@@ -35,8 +35,8 @@ public class LoginView implements MvpView {
 
     public void initView() {
         StatusBarUtil.setStatusBarWrite(mActivity);
-        StatusBarUtil.setColor(mActivity, mActivity.getResources().getColor(R.color.color_2b2b2b), 0);
-        StatusBarUtil.setDarkMode(mActivity);
+        StatusBarUtil.setColor(mActivity, mActivity.getResources().getColor(R.color.white), 0);
+        StatusBarUtil.setLightMode(mActivity);
 
         mActivity.binding.btLogin.setOnClickListener(view -> {
             KeyboardUtils.hideSoftInput(mActivity);

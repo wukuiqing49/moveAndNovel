@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/lib_base/lib_base.iml" filepath="$PROJECT_DIR$/lib_base/lib_base.iml" />
-      <module fileurl="file://$PROJECT_DIR$/lib_bs/lib_bs.iml" filepath="$PROJECT_DIR$/lib_bs/lib_bs.iml" />
-      <module fileurl="file://$PROJECT_DIR$/lib_database/lib_database.iml" filepath="$PROJECT_DIR$/lib_database/lib_database.iml" />
-      <module fileurl="file://$PROJECT_DIR$/lib_greendao/lib_greendao.iml" filepath="$PROJECT_DIR$/lib_greendao/lib_greendao.iml" />
-      <module fileurl="file://$PROJECT_DIR$/lib_move/lib_move.iml" filepath="$PROJECT_DIR$/lib_move/lib_move.iml" />
-      <module fileurl="file://$PROJECT_DIR$/lib_net/lib_net.iml" filepath="$PROJECT_DIR$/lib_net/lib_net.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/order.iml" filepath="$PROJECT_DIR$/.idea/order.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="order/app" />
+      <module fileurl="file://$PROJECT_DIR$/lib_base/lib_base.iml" filepath="$PROJECT_DIR$/lib_base/lib_base.iml" group="order/lib_base" />
+      <module fileurl="file://$PROJECT_DIR$/lib_bs/lib_bs.iml" filepath="$PROJECT_DIR$/lib_bs/lib_bs.iml" group="order/lib_bs" />
+      <module fileurl="file://$PROJECT_DIR$/lib_database/lib_database.iml" filepath="$PROJECT_DIR$/lib_database/lib_database.iml" group="order/lib_database" />
+      <module fileurl="file://$PROJECT_DIR$/lib_greendao/lib_greendao.iml" filepath="$PROJECT_DIR$/lib_greendao/lib_greendao.iml" group="order/lib_greendao" />
+      <module fileurl="file://$PROJECT_DIR$/lib_move/lib_move.iml" filepath="$PROJECT_DIR$/lib_move/lib_move.iml" group="order/lib_move" />
+      <module fileurl="file://$PROJECT_DIR$/lib_net/lib_net.iml" filepath="$PROJECT_DIR$/lib_net/lib_net.iml" group="order/lib_net" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/order.iml" filepath="$PROJECT_DIR$/.idea/order.iml" group="order" />
     </modules>
   </component>
 </project>
